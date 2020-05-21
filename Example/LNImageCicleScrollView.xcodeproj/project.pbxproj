@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B809D45D24763034005A820E /* UIImageView+LNWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B809D45B24763033005A820E /* UIImageView+LNWebImage.m */; };
 		F2EC06143CCA0340F1C0ADEE /* Pods_LNImageCicleScrollView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D4114C01566E3B57F68FB1 /* Pods_LNImageCicleScrollView_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		14D4114C01566E3B57F68FB1 /* Pods_LNImageCicleScrollView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LNImageCicleScrollView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AE4A51E05DEA090DA86F3A /* Pods-LNImageCicleScrollView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNImageCicleScrollView_Example.debug.xcconfig"; path = "Target Support Files/Pods-LNImageCicleScrollView_Example/Pods-LNImageCicleScrollView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1C584FB79C376765F0836AA4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1C584FB79C376765F0836AA4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2C95D6BD1D86C69AAEA0ED4C /* Pods-LNImageCicleScrollView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNImageCicleScrollView_Tests.release.xcconfig"; path = "Target Support Files/Pods-LNImageCicleScrollView_Tests/Pods-LNImageCicleScrollView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LNImageCicleScrollView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNImageCicleScrollView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,8 +64,10 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E9C93C3A6E634CD42E4CF5A /* Pods-LNImageCicleScrollView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNImageCicleScrollView_Example.release.xcconfig"; path = "Target Support Files/Pods-LNImageCicleScrollView_Example/Pods-LNImageCicleScrollView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B7588B7726A524C2C7CDFFB7 /* LNImageCicleScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LNImageCicleScrollView.podspec; path = ../LNImageCicleScrollView.podspec; sourceTree = "<group>"; };
-		F01F88BD76FA64E1AAF82385 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B7588B7726A524C2C7CDFFB7 /* LNImageCicleScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LNImageCicleScrollView.podspec; path = ../LNImageCicleScrollView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B809D45B24763033005A820E /* UIImageView+LNWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LNWebImage.m"; sourceTree = SOURCE_ROOT; };
+		B809D45C24763033005A820E /* UIImageView+LNWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LNWebImage.h"; sourceTree = SOURCE_ROOT; };
+		F01F88BD76FA64E1AAF82385 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F5D63E0E7CD62A9D48D2B142 /* Pods-LNImageCicleScrollView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNImageCicleScrollView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LNImageCicleScrollView_Tests/Pods-LNImageCicleScrollView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF9161A9E321854B5AD8AAE1 /* Pods_LNImageCicleScrollView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LNImageCicleScrollView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,6 +135,8 @@
 		6003F593195388D20070C39A /* Example for LNImageCicleScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				B809D45C24763033005A820E /* UIImageView+LNWebImage.h */,
+				B809D45B24763033005A820E /* UIImageView+LNWebImage.m */,
 				6003F59C195388D20070C39A /* LNAppDelegate.h */,
 				6003F59D195388D20070C39A /* LNAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -193,7 +198,6 @@
 				F5D63E0E7CD62A9D48D2B142 /* Pods-LNImageCicleScrollView_Tests.debug.xcconfig */,
 				2C95D6BD1D86C69AAEA0ED4C /* Pods-LNImageCicleScrollView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +262,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -365,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LNAppDelegate.m in Sources */,
+				B809D45D24763034005A820E /* UIImageView+LNWebImage.m in Sources */,
 				6003F5A7195388D20070C39A /* LNViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

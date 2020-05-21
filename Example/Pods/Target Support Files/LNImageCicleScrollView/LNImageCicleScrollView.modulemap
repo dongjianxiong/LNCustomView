@@ -1,0 +1,6 @@
+framework module LNImageCicleScrollView {
+  umbrella header "LNImageCicleScrollView-umbrella.h"
+
+  export *
+  module * { export * }
+}

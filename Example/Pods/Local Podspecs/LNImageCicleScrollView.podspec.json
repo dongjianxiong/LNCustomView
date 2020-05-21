@@ -1,0 +1,22 @@
+{
+  "name": "LNImageCicleScrollView",
+  "version": "0.1.0",
+  "summary": "A short description of LNImageCicleScrollView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dongjianxiong/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Lenny": "jianxiong20090919@126.com"
+  },
+  "source": {
+    "git": "https://github.com/dongjianxiong/LNImageCicleScrollView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LNImageCicleScrollView/Classes/**/*"
+}

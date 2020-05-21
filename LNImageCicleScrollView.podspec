@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/DONGJIANXIONG1/LNImageCicleScrollView'
+  s.homepage         = 'https://github.com/dongjianxiong/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'DONGJIANXIONG1' => 'dongjianxiong1@kingsoft.com' }
-  s.source           = { :git => 'https://github.com/DONGJIANXIONG1/LNImageCicleScrollView.git', :tag => s.version.to_s }
+  s.author           = { 'Lenny' => 'jianxiong20090919@126.com' }
+  s.source           = { :git => 'https://github.com/dongjianxiong/LNImageCicleScrollView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

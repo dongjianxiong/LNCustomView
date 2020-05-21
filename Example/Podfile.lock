@@ -1,0 +1,16 @@
+PODS:
+  - LNImageCicleScrollView (0.1.0)
+
+DEPENDENCIES:
+  - LNImageCicleScrollView (from `../`)
+
+EXTERNAL SOURCES:
+  LNImageCicleScrollView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LNImageCicleScrollView: 0eb257cdbf0fb94cf74c293f5b5a927d0aa95287
+
+PODFILE CHECKSUM: df0a81c13b5b1946c483c3eee6a31b0694dffba1
+
+COCOAPODS: 1.9.1
