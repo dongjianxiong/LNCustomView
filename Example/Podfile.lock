@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LNImageCicleScrollView: 94be33a1ed21f4ebd68f95369bc598e035228f47
+  LNImageCicleScrollView: 4bbd849e7c09313c372df1adf730cabd12824c81
 
 PODFILE CHECKSUM: df0a81c13b5b1946c483c3eee6a31b0694dffba1
 

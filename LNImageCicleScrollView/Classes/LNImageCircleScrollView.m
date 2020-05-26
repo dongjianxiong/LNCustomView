@@ -6,14 +6,22 @@
 //  Copyright © 2016年 dongjianxiong. All rights reserved.
 //
 
+
 #import "LNImageCircleScrollView.h"
 
 @interface LNImageCircleScrollView ()<UIScrollViewDelegate>
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+
 /**
  * 子视图数组
  */
-@property (nonatomic, strong) NSMutableArray *contentViews;
+@property (nonatomic, strong) NSMutableArray *containerViews;
+
+/**
+ * 图片视图数组
+ */
+@property (nonatomic, strong) NSMutableArray *imageViews;
 
 /**
  * 当前页
@@ -40,25 +48,32 @@
     self = [super initWithFrame:frame];
     if (self) {
 
-        self.contentViews = [NSMutableArray array];
-        self.delegate = self;
-        
-        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(frame.origin.x, frame.origin.y + frame.size.height + 5, frame.size.width, 30)];
-        self.pageControl.pageIndicatorTintColor = [UIColor greenColor];
-        self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
-        self.pageControl.currentPage = 0;
-        [self addSubview:self.pageControl];
-        
-        NSMutableArray *imageViews = [NSMutableArray array];
+        self.scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+        self.scrollView.delegate = self;
+        [self addSubview:self.scrollView];
+
+        self.containerViews = [NSMutableArray array];
+        self.imageViews = [NSMutableArray array];
+
         for (int index = 0; index < 3; index ++) {//创建三个imageView用于循环显示图片
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
+            
+            UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake((index) * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+            [self.scrollView addSubview:containerView];
+            [self.containerViews addObject:containerView];
+            
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:containerView.bounds];
             imageView.userInteractionEnabled = YES;
-            [imageViews addObject:imageView];
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
             [imageView addGestureRecognizer:tap];
-            [self addSubview:imageView];
-            [self.contentViews addObject:imageView];
+            [containerView addSubview:imageView];
+            [self.imageViews addObject:imageView];
         }
+
+        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 30, self.frame.size.width, 30)];
+          self.pageControl.pageIndicatorTintColor = [UIColor greenColor];
+          self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+          self.pageControl.currentPage = 0;
+          [self addSubview:self.pageControl];
     }
     return self;
 }
@@ -70,7 +85,7 @@
         interval = 1;
     }
     self.timerInterval = interval;
-    
+
     [self starTimer];
 }
 
@@ -78,6 +93,11 @@
 - (void)hiddenPage:(BOOL)isHidden;
 {
     self.pageControl.hidden = isHidden;
+}
+
+- (void)setPageControllCenter:(CGPoint)center
+{
+    self.pageControl.center = center;
 }
 
 - (void)starTimer
@@ -88,9 +108,9 @@
 
     dispatch_source_set_event_handler(self.timer, ^{
         if (self.isScrollRight) {
-            [self setContentOffset:CGPointMake(self.bounds.size.width * 2, 0.0f) animated:true];
+            [self.scrollView setContentOffset:CGPointMake(self.bounds.size.width, 0.0f) animated:true];
         }else{
-            [self setContentOffset:CGPointMake(0, 0.0f) animated:true];
+            [self.scrollView setContentOffset:CGPointMake(0, 0.0f) animated:true];
         }
     });
     dispatch_resume(self.timer);
@@ -115,22 +135,20 @@
 
 - (void)checkTotalCount:(NSInteger)totalCount
 {
-        
-    if (totalCount > 0) {
-        if (totalCount == 1) {//当只有一张图片的时候不滚动
-            self.contentSize = CGSizeMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
-            self.contentOffset = CGPointMake(0, 0);
-            self.scrollEnabled = NO;
-        }else{
-            //当图片数大于一张时可以滚动
-            self.contentSize = CGSizeMake(3*CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
-            self.contentOffset = CGPointMake(self.frame.size.width, 0);
-            self.scrollEnabled = YES;
-        }
-        [self resetImageViews];
-    }else{
-//        [self.contentViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    if (totalCount <= 0) {
+        return;
     }
+    if (totalCount == 1) {//当只有一张图片的时候不滚动
+        self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+        self.scrollView.contentOffset = CGPointMake(0, 0);
+        self.scrollView.scrollEnabled = NO;
+    }else{
+        //当图片数大于一张时可以滚动
+        self.scrollView.contentSize = CGSizeMake(3*CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+        self.scrollView.contentOffset = CGPointMake(self.frame.size.width, 0);
+        self.scrollView.scrollEnabled = YES;
+    }
+    [self resetImageViews];
     self.pageControl.numberOfPages = totalCount;
 }
 
@@ -152,7 +170,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self cancelTimer];
-    
+
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
@@ -165,22 +183,17 @@
 {
     NSInteger totalCount = [self.circleDelegate numberOfImage:self];
 
-    UIImageView *contentView = nil;
-    
-    if (self.contentViews.count > 0) {
-        contentView = self.contentViews[0];
-    }
     if (totalCount == 1) {
         //如果只有一张图片，不需要滚动
-        [self.circleDelegate circleScrollView:self imageView:self.contentViews[1] atIndex:self.currentPageIndex];
+        [self.circleDelegate circleScrollView:self imageView:self.imageViews[1] atIndex:self.currentPageIndex];
     }else if (totalCount > 1){
-    
+
         //获取子视图
         [self getContentViewsWithLocations];
-    
+
         //视图布局完之后返回到中间的位置
-        [self setContentOffset:CGPointMake(self.bounds.size.width, 0.0f) animated:NO];
-        
+        [self.scrollView setContentOffset:CGPointMake(self.bounds.size.width, 0.0f) animated:NO];
+
     }else{
         NSLog(@"There is no subviews to show");
     }
@@ -199,11 +212,11 @@
     NSInteger leftPage = [self validNextPageWithExpectedNextPage:self.currentPageIndex-1];
     //获取将要在左边显示的视图
     [self imageAtIndex:leftPage location:0];
-    
+
     NSInteger currentPage = self.currentPageIndex;
     //获取将要在中间显示的视图
     [self imageAtIndex:currentPage location:1];
-    
+
     NSInteger rightPage = [self validNextPageWithExpectedNextPage:self.currentPageIndex+1];
     [self imageAtIndex:rightPage location:2];
     //获取将要在右边显示的视图
@@ -213,12 +226,13 @@
 - (void)imageAtIndex:(NSInteger)index
           location:(NSInteger)location
 {
-    
+
     UIEdgeInsets edgeInsets = [self.circleDelegate circleScrollViewImageInset:self];
     //重新对子视图进行布局
-    UIImageView *imageView = self.contentViews[location];
-    CGFloat left = self.frame.size.width * location + edgeInsets.left;
-    imageView.frame = CGRectMake(left, edgeInsets.top, self.frame.size.width - edgeInsets.left - edgeInsets.right, self.frame.size.width - edgeInsets.top - edgeInsets.bottom);
+    UIImageView *imageView = self.imageViews[location];
+    CGFloat imageWidth = self.frame.size.width - edgeInsets.left - edgeInsets.right;
+    CGFloat imageHeight = self.frame.size.height - edgeInsets.top - edgeInsets.bottom;
+    imageView.frame = CGRectMake(edgeInsets.left, edgeInsets.top, imageWidth, imageHeight);
     [self.circleDelegate circleScrollView:self imageView:imageView atIndex:index];
 }
 
@@ -235,11 +249,6 @@
     }else{
         return expectedNextPage;
     }
-}
-
-- (void)didMoveToSuperview
-{
-    [self.superview addSubview:self.pageControl];
 }
 
 /*

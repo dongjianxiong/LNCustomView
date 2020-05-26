@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020A4CF592344D6DE8C4BB677DC72CB4 /* LNImageCicleScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F11455B048FA5969701CB982F2767A /* LNImageCicleScrollView-dummy.m */; };
 		38773392634F6EC3C8F81058BF36069A /* Pods-LNImageCicleScrollView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB382F7361F8424CF2CA46B9550EA476 /* Pods-LNImageCicleScrollView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FAC76D71DDA18B75604EAEF3AF786FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		567EA554F877931338284BCC5338CEAA /* LNImageCicleScrollView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A94C367C8912B11EF49EC917553A1B /* LNImageCicleScrollView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FAC76D71DDA18B75604EAEF3AF786FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		426A6651210CA376013DFD5EA2DB4DB0 /* LNImageCircleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E71455743BC5723F9D072C205EA1D914 /* LNImageCircleScrollView.m */; };
+		4401CED1CD5FF983AE75A9FE9427404B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		4BBFC7646C5D0E5BEBCDFAF32CCBB1F4 /* LNImageCicleScrollView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A94C367C8912B11EF49EC917553A1B /* LNImageCicleScrollView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65EE3066DAFEB0AC95759EC55B55CDCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		867B59426AA71FAFC7B7370810F7F1F7 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD442E5C7C987721CD278FC60D517FF /* ReplaceMe.m */; };
 		8C926FFD4A29304FB37DAFE87D894F00 /* Pods-LNImageCicleScrollView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD995D3F587FCBF8F9A5954F8B516270 /* Pods-LNImageCicleScrollView_Tests-dummy.m */; };
-		94877B2A9E927AF3004979A54137EC39 /* LNImageCircleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E71455743BC5723F9D072C205EA1D914 /* LNImageCircleScrollView.m */; };
 		972CAF6B6ECAA4A060552164A71F74F0 /* Pods-LNImageCicleScrollView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBF7688CD9EB925119C703FAB9D8085 /* Pods-LNImageCicleScrollView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A5CCA049EABAF9D0219E704DAF43486 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD442E5C7C987721CD278FC60D517FF /* ReplaceMe.m */; };
 		A3FF23E87A9A420247C1B2DBE36BA8B6 /* Pods-LNImageCicleScrollView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E54829BB1A4AEABE5BEA5ED582F9135C /* Pods-LNImageCicleScrollView_Example-dummy.m */; };
-		A766F0DB3B2A28F5B884D123AE8C1491 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		AB3DC1E577DEA8D5C8D3EEC033F4138E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		DB076FD3959C32B98612A7D550A0D06D /* LNImageCircleScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = B87D31F90A4E911870010DEBF7564ACD /* LNImageCircleScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB3DC1E577DEA8D5C8D3EEC033F4138E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		C9E155AE7DF19562369FC76559B72A10 /* LNImageCircleScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = B87D31F90A4E911870010DEBF7564ACD /* LNImageCircleScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFFD8A5805FE55EDBBB977BFEDC1F4D0 /* LNImageCicleScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F11455B048FA5969701CB982F2767A /* LNImageCicleScrollView-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +45,10 @@
 		0AE971B8350513BF420E1F347BB3B2EF /* Pods-LNImageCicleScrollView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LNImageCicleScrollView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		12F4E448FF0E7BF9D5188CD6B8FDF1E7 /* Pods-LNImageCicleScrollView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LNImageCicleScrollView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1DD442E5C7C987721CD278FC60D517FF /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = LNImageCicleScrollView/Classes/ReplaceMe.m; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		35ACA3D9348C48BF6C2D39A79E68A743 /* Pods-LNImageCicleScrollView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LNImageCicleScrollView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4332C6571FAE9446ACA004CBF873A664 /* Pods_LNImageCicleScrollView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LNImageCicleScrollView_Example.framework; path = "Pods-LNImageCicleScrollView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		507E54C0B361249D5D874AA5D01CDF35 /* Pods_LNImageCicleScrollView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LNImageCicleScrollView_Tests.framework; path = "Pods-LNImageCicleScrollView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A94C367C8912B11EF49EC917553A1B /* LNImageCicleScrollView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LNImageCicleScrollView-umbrella.h"; sourceTree = "<group>"; };
 		59908EF9FA36B2A51E2317367AA8159C /* Pods-LNImageCicleScrollView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LNImageCicleScrollView_Example.modulemap"; sourceTree = "<group>"; };
@@ -85,6 +87,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C29273C4F33AC23F58F7E57D9ECDF81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4401CED1CD5FF983AE75A9FE9427404B /* Foundation.framework in Frameworks */,
+				65EE3066DAFEB0AC95759EC55B55CDCF /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		624316A11B56B1D5EA966FBCA88B4ABD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,17 +104,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0E4E26454A2FA920FE45C3ED5B5078B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A766F0DB3B2A28F5B884D123AE8C1491 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3426A290754BB9999AC5BBCA8EF941D8 /* Pods-LNImageCicleScrollView_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,14 +164,6 @@
 			path = "Example/Pods/Target Support Files/LNImageCicleScrollView";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		CA94E62801BD4C240193243A7EAFB8CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,18 +179,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				35D670CD76465BBFB8F8A6E75B51B8AC /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				CA94E62801BD4C240193243A7EAFB8CA /* Products */,
 				68EAD56D5F506D4801493C094B61451D /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D7021C3E3F6E049A188609128E97AF1B /* Pod */ = {
@@ -198,6 +193,15 @@
 				E8F0BB5A0611ADA47F0700CAD3A26A18 /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		E54345BC41743A8294BBF855AD3F2F77 /* LNImageCicleScrollView */ = {
@@ -232,12 +236,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		143F53033445FE326EB81BF8EAC15E69 /* Headers */ = {
+		56803F01E131209F9A93D1E917CE93E9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				567EA554F877931338284BCC5338CEAA /* LNImageCicleScrollView-umbrella.h in Headers */,
-				DB076FD3959C32B98612A7D550A0D06D /* LNImageCircleScrollView.h in Headers */,
+				4BBFC7646C5D0E5BEBCDFAF32CCBB1F4 /* LNImageCicleScrollView-umbrella.h in Headers */,
+				C9E155AE7DF19562369FC76559B72A10 /* LNImageCircleScrollView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,12 +285,12 @@
 		};
 		4720062ED7C0660872AAAA6667B8741B /* LNImageCicleScrollView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 532DC056FC113A314723F87C083C456B /* Build configuration list for PBXNativeTarget "LNImageCicleScrollView" */;
+			buildConfigurationList = 2438030D553B196CA5CBE690565FEF31 /* Build configuration list for PBXNativeTarget "LNImageCicleScrollView" */;
 			buildPhases = (
-				143F53033445FE326EB81BF8EAC15E69 /* Headers */,
-				4185811A125652AAB41BC8B0C42A4ABE /* Sources */,
-				B0E4E26454A2FA920FE45C3ED5B5078B /* Frameworks */,
-				B8103CDDE90BA05631DBDCBCB3B331DB /* Resources */,
+				56803F01E131209F9A93D1E917CE93E9 /* Headers */,
+				AAC8DB3B249475DBDD0F2D8CAB2A4D4D /* Sources */,
+				4C29273C4F33AC23F58F7E57D9ECDF81 /* Frameworks */,
+				317EB3E79B2DD1D976FDD6B7A6D9DAAD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -346,7 +350,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B8103CDDE90BA05631DBDCBCB3B331DB /* Resources */ = {
+		317EB3E79B2DD1D976FDD6B7A6D9DAAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,21 +374,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4185811A125652AAB41BC8B0C42A4ABE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				020A4CF592344D6DE8C4BB677DC72CB4 /* LNImageCicleScrollView-dummy.m in Sources */,
-				94877B2A9E927AF3004979A54137EC39 /* LNImageCircleScrollView.m in Sources */,
-				9A5CCA049EABAF9D0219E704DAF43486 /* ReplaceMe.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6898A3C333EB2F51EA541580EB2F7BDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8C926FFD4A29304FB37DAFE87D894F00 /* Pods-LNImageCicleScrollView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC8DB3B249475DBDD0F2D8CAB2A4D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFFD8A5805FE55EDBBB977BFEDC1F4D0 /* LNImageCicleScrollView-dummy.m in Sources */,
+				426A6651210CA376013DFD5EA2DB4DB0 /* LNImageCircleScrollView.m in Sources */,
+				867B59426AA71FAFC7B7370810F7F1F7 /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +418,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		052591E7D5161836C04799B85A2F2D02 /* Release */ = {
+		032C221E11B4F53AFD924962EE814FC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79EB56786D4772444C8877FBEBD87E6F /* LNImageCicleScrollView.release.xcconfig */;
 			buildSettings = {
@@ -606,37 +610,6 @@
 			};
 			name = Release;
 		};
-		6403BEC14CF20CFB9E4BD682B0E157F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB3D5888B30D9CA6206EF9042ECF6D67 /* LNImageCicleScrollView.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LNImageCicleScrollView/LNImageCicleScrollView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LNImageCicleScrollView/LNImageCicleScrollView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LNImageCicleScrollView/LNImageCicleScrollView.modulemap";
-				PRODUCT_MODULE_NAME = LNImageCicleScrollView;
-				PRODUCT_NAME = LNImageCicleScrollView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -701,6 +674,37 @@
 			};
 			name = Debug;
 		};
+		DCE9C1981ACE162C0817EEB7B15B24E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3D5888B30D9CA6206EF9042ECF6D67 /* LNImageCicleScrollView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LNImageCicleScrollView/LNImageCicleScrollView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LNImageCicleScrollView/LNImageCicleScrollView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LNImageCicleScrollView/LNImageCicleScrollView.modulemap";
+				PRODUCT_MODULE_NAME = LNImageCicleScrollView;
+				PRODUCT_NAME = LNImageCicleScrollView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		FE0E29010FC63D8C59DC949BF70187C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 12F4E448FF0E7BF9D5188CD6B8FDF1E7 /* Pods-LNImageCicleScrollView_Example.release.xcconfig */;
@@ -738,20 +742,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2438030D553B196CA5CBE690565FEF31 /* Build configuration list for PBXNativeTarget "LNImageCicleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCE9C1981ACE162C0817EEB7B15B24E3 /* Debug */,
+				032C221E11B4F53AFD924962EE814FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
 				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		532DC056FC113A314723F87C083C456B /* Build configuration list for PBXNativeTarget "LNImageCicleScrollView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6403BEC14CF20CFB9E4BD682B0E157F1 /* Debug */,
-				052591E7D5161836C04799B85A2F2D02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

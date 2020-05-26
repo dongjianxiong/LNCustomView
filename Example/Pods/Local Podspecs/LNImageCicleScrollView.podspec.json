@@ -1,8 +1,8 @@
 {
   "name": "LNImageCicleScrollView",
   "version": "0.1.0",
-  "summary": "A short description of LNImageCicleScrollView.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "a simple component to surport images circle scroll.",
+  "description": "a simple component to surport images circle scroll, I hope it will help you.",
   "homepage": "https://github.com/dongjianxiong/",
   "license": {
     "type": "MIT",
@@ -18,5 +18,9 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "LNImageCicleScrollView/Classes/**/*"
+  "source_files": "LNImageCicleScrollView/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ]
 }
