@@ -136,7 +136,6 @@ typedef NS_ENUM(NSInteger, LNImageScrollDirection) {
         self.scrollView.contentOffset = CGPointMake(self.frame.size.width, 0);
         self.scrollView.scrollEnabled = YES;
     }
-    UITableView
     [self resetImageViews];
 }
 
