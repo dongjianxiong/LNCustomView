@@ -80,6 +80,7 @@ typedef NS_ENUM(NSInteger, LNImageScrollDirection) {
         [self creatImageViewsWithCount:1];
     }
     self.pageControl.numberOfPages = totalCount;
+    [self reloadImages];
 }
 
 - (UIPageControl *)pageControl
@@ -96,18 +97,47 @@ typedef NS_ENUM(NSInteger, LNImageScrollDirection) {
 
 - (void)creatImageViewsWithCount:(NSUInteger)count
 {
-    for (int index = 0; index < count; index ++) {//创建三个imageView用于循环显示图片
-        UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake((index) * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
-        [self.scrollView addSubview:containerView];
-        [self.containerViews addObject:containerView];
-        
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:containerView.bounds];
-        imageView.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
-        [imageView addGestureRecognizer:tap];
-        [containerView addSubview:imageView];
-        [self.imageViews addObject:imageView];
+    if (self.containerViews.count != count) {
+        for (UIView *view in self.containerViews) {
+            [view removeFromSuperview];
+        }
+        for (UIImageView *imageView in self.imageViews) {
+            [imageView removeFromSuperview];
+        }
+        [self.containerViews removeAllObjects];
+        [self.imageViews removeAllObjects];
+        for (int index = 0; index < count; index ++) {//创建三个imageView用于循环显示图片
+            UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake((index) * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+            [self.scrollView addSubview:containerView];
+            [self.containerViews addObject:containerView];
+            
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:containerView.bounds];
+            imageView.userInteractionEnabled = YES;
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+            [imageView addGestureRecognizer:tap];
+            [containerView addSubview:imageView];
+            [self.imageViews addObject:imageView];
+        }
     }
+}
+
+- (void)reloadImages
+{
+    if (self.totalCount == 0) {
+        return;
+    }
+    if (self.totalCount == 1) {//当只有一张图片的时候不滚动
+        self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+        self.scrollView.contentOffset = CGPointMake(0, 0);
+        self.scrollView.scrollEnabled = NO;
+    }else{
+        //当图片数大于一张时可以滚动
+        self.scrollView.contentSize = CGSizeMake(3*CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+        self.scrollView.contentOffset = CGPointMake(self.frame.size.width, 0);
+        self.scrollView.scrollEnabled = YES;
+    }
+    UITableView
+    [self resetImageViews];
 }
 
 - (void)timerSart:(NSTimeInterval)interval
@@ -164,24 +194,6 @@ typedef NS_ENUM(NSInteger, LNImageScrollDirection) {
         dispatch_source_cancel(_timer);
         _timer = nil;
     }
-}
-
-- (void)reloadImages
-{
-    if (self.totalCount == 0) {
-        return;
-    }
-    if (self.totalCount == 1) {//当只有一张图片的时候不滚动
-        self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
-        self.scrollView.contentOffset = CGPointMake(0, 0);
-        self.scrollView.scrollEnabled = NO;
-    }else{
-        //当图片数大于一张时可以滚动
-        self.scrollView.contentSize = CGSizeMake(3*CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
-        self.scrollView.contentOffset = CGPointMake(self.frame.size.width, 0);
-        self.scrollView.scrollEnabled = YES;
-    }
-    [self resetImageViews];
 }
 
 //当视图滚动的时候

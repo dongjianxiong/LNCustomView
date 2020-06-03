@@ -40,20 +40,36 @@
 @class LNImageCircleScrollView;
 
 @protocol LNImageCircleScrollViewDelegate <NSObject>
+/**
+设置图片
+ @param scrollImageView  当前视图
+ @param imageView  显示图片的UIImageView
+ @param index  图片位置
+ */
+- (void)circleScrollView:(LNImageCircleScrollView *_Nullable)scrollImageView imageView:(UIImageView *_Nullable)imageView atIndex:(NSUInteger)index;
 
-- (void)circleScrollView:(LNImageCircleScrollView *_Nullable)scrollView imageView:(UIImageView *_Nullable)imageView atIndex:(NSUInteger)index;
-- (UIEdgeInsets)circleScrollViewImageEdgeInset:(LNImageCircleScrollView *_Nullable)scrollView atIndex:(NSUInteger)index;
-- (void)circleScrollView:(LNImageCircleScrollView *_Nullable)scrollView didSelectedAtIndex:(NSInteger)index;
+/**
+设置图片边距
+@param scrollImageView  当前视图
+@param index  图片位置
+*/
+- (UIEdgeInsets)circleScrollViewImageEdgeInset:(LNImageCircleScrollView *_Nullable)scrollImageView atIndex:(NSUInteger)index;
+
+/**
+点击图片
+@param scrollImageView  当前视图
+@param index  图片位置
+*/
+- (void)circleScrollView:(LNImageCircleScrollView *_Nullable)scrollImageView didSelectedAtIndex:(NSInteger)index;
 
 @end
 
 @interface LNImageCircleScrollView : UIScrollView
 
+//接收回调的代理
 @property (nonatomic, weak) id<LNImageCircleScrollViewDelegate> _Nullable circleDelegate;
-
+///显示图片的个数
 @property (nonatomic, assign) NSUInteger totalCount;
-
-@property (nonatomic, assign) UIEdgeInsets imageEdgeInsets;
 
 //重载图片
 - (void)reloadImages;
