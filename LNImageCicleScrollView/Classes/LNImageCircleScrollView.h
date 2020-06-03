@@ -41,9 +41,8 @@
 
 @protocol LNImageCircleScrollViewDelegate <NSObject>
 
-- (NSInteger)numberOfImage:(LNImageCircleScrollView *_Nullable)scrollView;
-- (void)circleScrollView:(LNImageCircleScrollView *_Nullable)scrollView imageView:(UIImageView *_Nullable)imageView atIndex:(NSInteger)index;
-- (UIEdgeInsets)circleScrollViewImageInset:(LNImageCircleScrollView *_Nullable)scrollView;
+- (void)circleScrollView:(LNImageCircleScrollView *_Nullable)scrollView imageView:(UIImageView *_Nullable)imageView atIndex:(NSUInteger)index;
+- (UIEdgeInsets)circleScrollViewImageEdgeInset:(LNImageCircleScrollView *_Nullable)scrollView atIndex:(NSUInteger)index;
 - (void)circleScrollView:(LNImageCircleScrollView *_Nullable)scrollView didSelectedAtIndex:(NSInteger)index;
 
 @end
@@ -51,6 +50,10 @@
 @interface LNImageCircleScrollView : UIScrollView
 
 @property (nonatomic, weak) id<LNImageCircleScrollViewDelegate> _Nullable circleDelegate;
+
+@property (nonatomic, assign) NSUInteger totalCount;
+
+@property (nonatomic, assign) UIEdgeInsets imageEdgeInsets;
 
 //重载图片
 - (void)reloadImages;

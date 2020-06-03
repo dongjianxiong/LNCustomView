@@ -23,7 +23,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		B809D45D24763034005A820E /* UIImageView+LNWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B809D45B24763033005A820E /* UIImageView+LNWebImage.m */; };
 		B8CA5F55247CD8FD00336615 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B8CA5F54247CD8FC00336615 /* 1.png */; };
 		F2EC06143CCA0340F1C0ADEE /* Pods_LNImageCicleScrollView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D4114C01566E3B57F68FB1 /* Pods_LNImageCicleScrollView_Example.framework */; };
 /* End PBXBuildFile section */
@@ -66,8 +65,6 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E9C93C3A6E634CD42E4CF5A /* Pods-LNImageCicleScrollView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNImageCicleScrollView_Example.release.xcconfig"; path = "Target Support Files/Pods-LNImageCicleScrollView_Example/Pods-LNImageCicleScrollView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B7588B7726A524C2C7CDFFB7 /* LNImageCicleScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LNImageCicleScrollView.podspec; path = ../LNImageCicleScrollView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B809D45B24763033005A820E /* UIImageView+LNWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LNWebImage.m"; sourceTree = SOURCE_ROOT; };
-		B809D45C24763033005A820E /* UIImageView+LNWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LNWebImage.h"; sourceTree = SOURCE_ROOT; };
 		B8CA5F54247CD8FC00336615 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../../../../../Documents/1.png; sourceTree = "<group>"; };
 		F01F88BD76FA64E1AAF82385 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F5D63E0E7CD62A9D48D2B142 /* Pods-LNImageCicleScrollView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNImageCicleScrollView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LNImageCicleScrollView_Tests/Pods-LNImageCicleScrollView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,8 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				B8CA5F54247CD8FC00336615 /* 1.png */,
-				B809D45C24763033005A820E /* UIImageView+LNWebImage.h */,
-				B809D45B24763033005A820E /* UIImageView+LNWebImage.m */,
 				6003F59C195388D20070C39A /* LNAppDelegate.h */,
 				6003F59D195388D20070C39A /* LNAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -334,10 +329,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LNImageCicleScrollView_Example/Pods-LNImageCicleScrollView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LNImageCicleScrollView/LNImageCicleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LNImageCicleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,7 +371,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LNAppDelegate.m in Sources */,
-				B809D45D24763034005A820E /* UIImageView+LNWebImage.m in Sources */,
 				6003F5A7195388D20070C39A /* LNViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

@@ -1,16 +1,25 @@
 PODS:
-  - LNImageCicleScrollView (0.1.0)
+  - LNImageCicleScrollView (1.0.0)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
 
 DEPENDENCIES:
   - LNImageCicleScrollView (from `../`)
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
 
 EXTERNAL SOURCES:
   LNImageCicleScrollView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LNImageCicleScrollView: 4bbd849e7c09313c372df1adf730cabd12824c81
+  LNImageCicleScrollView: 138b7163b95ab0b63dc10b779bb7d51f68bac5c0
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
 
-PODFILE CHECKSUM: df0a81c13b5b1946c483c3eee6a31b0694dffba1
+PODFILE CHECKSUM: 938b8f45238edc38a78b4e28f7a7709770db2d03
 
 COCOAPODS: 1.9.1
