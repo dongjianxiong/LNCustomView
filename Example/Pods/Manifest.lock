@@ -1,5 +1,5 @@
 PODS:
-  - LNImageCicleScrollView (1.0.0)
+  - LNImageCicleScrollView (1.1.0)
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LNImageCicleScrollView: 138b7163b95ab0b63dc10b779bb7d51f68bac5c0
+  LNImageCicleScrollView: a88c073b47004d588eaea8e0c27a65d42b8db50f
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
 
 PODFILE CHECKSUM: 938b8f45238edc38a78b4e28f7a7709770db2d03
